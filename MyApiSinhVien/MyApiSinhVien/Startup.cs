@@ -33,7 +33,7 @@ namespace MyApiSinhVien
             services.AddControllers();
             services.AddDbContext<MyDbContext>(options =>
             {
-                options.UseSqlServer(Configuration.GetConnectionString("MyDB"));
+                options.MySql(Configuration.GetConnectionString("MyDB"));
             });
             services.AddSwaggerGen(c =>
             {
